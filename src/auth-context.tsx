@@ -69,6 +69,7 @@ export const initUserManager = (props: AuthProviderProps): UserManager => {
     popupWindowTarget,
     extraQueryParams,
     metadata,
+    ...otherProps
   } = props;
   return new UserManager({
     authority: authority ?? '',
@@ -86,6 +87,7 @@ export const initUserManager = (props: AuthProviderProps): UserManager => {
     automaticSilentRenew,
     extraQueryParams,
     metadata: metadata,
+    ...otherProps
   });
 };
 
